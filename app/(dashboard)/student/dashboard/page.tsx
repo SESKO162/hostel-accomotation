@@ -51,7 +51,7 @@ export default function StudentDashboard() {
       <div className="flex flex-col gap-6 py-6">
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl font-cal-sans font-bold text-primary">Student Dashboard</h1>
-          <p className="text-muted-foreground">Welcome back, John. Here's your access overview.</p>
+          <p className="text-muted-foreground">Welcome back, John. Here&apos;s your access overview.</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -114,11 +114,9 @@ export default function StudentDashboard() {
                 <CardContent className="p-6">
                   <BarChart
                     data={chartData}
-                    index="name"
-                    categories={["value"]}
+                    dataKey="value"
+                    xAxisKey="name"
                     colors={["#3B82F6"]}
-                    valueFormatter={(value) => `${value} events`}
-                    yAxisWidth={30}
                     height={300}
                   />
                 </CardContent>

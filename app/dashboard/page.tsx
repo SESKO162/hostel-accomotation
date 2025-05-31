@@ -36,7 +36,7 @@ export default function DashboardPage() {
           <CardContent>
             <div className="text-2xl font-bold">{currentUser || 'Guest'}</div>
             <p className="text-xs text-muted-foreground">
-              You're signed in with fingerprint authentication
+              You&apos;re signed in with fingerprint authentication
             </p>
           </CardContent>
         </Card>

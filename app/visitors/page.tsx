@@ -30,7 +30,7 @@ export default function VisitorsPage() {
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Today's Visitors</CardTitle>
+              <CardTitle>Today&apos;s Visitors</CardTitle>
               <CardDescription>Visitors checked in today</CardDescription>
             </CardHeader>
             <CardContent>

@@ -78,7 +78,7 @@ export default function ScanPage() {
                 1. Select the appropriate location from the tabs above.<br />
                 2. Have the individual present their access card to the scanner.<br />
                 3. Verify the information displayed matches the individual.<br />
-                4. For any issues, use the "Report Issue" button.
+                4. For any issues, use the &quot;Report Issue&quot; button.
               </p>
             </div>
             
@@ -96,7 +96,7 @@ export default function ScanPage() {
             <div className="space-y-2">
               <h3 className="font-semibold">Scanner Troubleshooting</h3>
               <p className="text-sm text-muted-foreground">
-                If the scanner isn't working properly:<br />
+                If the scanner isn&apos;t working properly:<br />
                 • Refresh the page<br />
                 • Check network connectivity<br />
                 • Try restarting the scanner hardware<br />

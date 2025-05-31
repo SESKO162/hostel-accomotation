@@ -17,6 +17,7 @@ interface HostelContextType {
   registerFingerprint: (roomId: string, fingerprintId: string) => void;
   checkIn: (roomId: string, userId: string) => void;
   checkOut: (roomId: string, userId: string) => void;
+  logout: () => void;
 }
 
 const HostelContext = createContext<HostelContextType | undefined>(undefined);

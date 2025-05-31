@@ -17,7 +17,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { LineChart } from "@/components/ui/chart"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 export default function SecurityDashboard() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -133,7 +133,7 @@ export default function SecurityDashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">892</div>
-              <p className="text-xs text-muted-foreground">Today's total</p>
+              <p className="text-xs text-muted-foreground">Today&apos;s total</p>
             </CardContent>
           </Card>
           <Card>
@@ -161,7 +161,7 @@ export default function SecurityDashboard() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Today's Access Traffic</CardTitle>
+            <CardTitle>Today&apos;s Access Traffic</CardTitle>
             <CardDescription>
               Hourly breakdown of access events by user type
             </CardDescription>
@@ -169,11 +169,8 @@ export default function SecurityDashboard() {
           <CardContent className="p-6">
             <LineChart
               data={chartData}
-              index="name"
-              categories={["faculty", "students", "visitors"]}
-              colors={["#3B82F6", "#6366F1", "#F97316"]}
-              valueFormatter={(value) => `${value} accesses`}
-              yAxisWidth={40}
+              dataKeys={['faculty', 'students', 'visitors']}
+              colors={['#3B82F6', '#6366F1', '#F97316']}
               height={300}
             />
           </CardContent>

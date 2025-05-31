@@ -30,18 +30,18 @@ export default function AdminDashboard() {
   
   // Mock data for access activity
   const activityData = [
-    { date: "Apr 12", count: 125 },
-    { date: "Apr 13", count: 147 },
-    { date: "Apr 14", count: 118 },
-    { date: "Apr 15", count: 152 },
-    { date: "Apr 16", count: 165 },
-    { date: "Apr 17", count: 87 },
-    { date: "Apr 18", count: 95 },
-    { date: "Apr 19", count: 132 },
-    { date: "Apr 20", count: 142 },
-    { date: "Apr 21", count: 155 },
-    { date: "Apr 22", count: 168 },
-    { date: "Today", count: 143 },
+    { name: "Apr 12", count: 125 },
+    { name: "Apr 13", count: 147 },
+    { name: "Apr 14", count: 118 },
+    { name: "Apr 15", count: 152 },
+    { name: "Apr 16", count: 165 },
+    { name: "Apr 17", count: 87 },
+    { name: "Apr 18", count: 95 },
+    { name: "Apr 19", count: 132 },
+    { name: "Apr 20", count: 142 },
+    { name: "Apr 21", count: 155 },
+    { name: "Apr 22", count: 168 },
+    { name: "Today", count: 143 },
   ]
   
   // Mock data for recent system events
@@ -132,11 +132,11 @@ export default function AdminDashboard() {
             <CardContent className="flex justify-center">
               <DonutChart 
                 data={userTypeData}
-                index="name"
-                category="value"
                 colors={["#3B82F6", "#6366F1", "#F97316", "#22C55E", "#EF4444"]}
-                valueFormatter={(value) => `${value} users`}
-                className="h-80"
+                width="100%"
+                height={320}
+                innerRadius="60%"
+                outerRadius="80%"
               />
             </CardContent>
           </Card>
@@ -150,11 +150,10 @@ export default function AdminDashboard() {
             <CardContent>
               <AreaChart
                 data={activityData}
-                index="date"
-                categories={["count"]}
+                dataKeys={["count"]}
                 colors={["#3B82F6"]}
-                valueFormatter={(value) => `${value} events`}
-                className="h-80"
+                width="100%"
+                height={320}
               />
             </CardContent>
           </Card>
