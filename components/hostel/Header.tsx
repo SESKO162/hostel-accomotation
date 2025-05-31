@@ -61,7 +61,7 @@ export function Header() {
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center">
                 <Fingerprint className="h-8 w-8 text-blue-600" />
-                <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">HostelSecure</span>
+                <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">Hostel Access</span>
               </Link>
             </div>
             <nav className="hidden sm:ml-6 sm:flex sm:space-x-8">
