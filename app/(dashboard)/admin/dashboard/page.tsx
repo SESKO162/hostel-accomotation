@@ -1,4 +1,4 @@
-"use client"
+/*"use client"
 
 import { useState } from "react"
 import DashboardLayout from "@/components/layout/dashboard-layout"
@@ -271,4 +271,4 @@ export default function AdminDashboard() {
       </div>
     </DashboardLayout>
   )
-}
+}*/
