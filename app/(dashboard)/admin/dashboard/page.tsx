@@ -90,9 +90,14 @@ export default function AdminDashboard() {
             <CardContent>
               <div className="text-2xl font-bold">1,653</div>
               <div className="mt-2">
-                <Progress value={92} className="h-2" />
+                <Progress 
+                  value={1653} 
+                  max={1802}
+                  className="h-2" 
+                  getValueLabel={(value, max) => `${Math.round((value / max) * 100)}% of total users`}
+                />
                 <p className="text-xs text-muted-foreground mt-1">
-                  92% of total users
+                  {Math.round((1653 / 1802) * 100)}% of total users
                 </p>
               </div>
             </CardContent>

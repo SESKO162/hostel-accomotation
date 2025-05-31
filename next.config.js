@@ -9,6 +9,13 @@ const nextConfig = {
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'mjs'],
   // Webpack configuration
   webpack: (config, { isServer }) => {
+    // Add a rule to ignore _document.js files in the app directory
+    config.module.rules.push({
+      test: /_document\.(js|jsx|ts|tsx)$/,
+      include: [require('path').resolve(__dirname, 'app')],
+      use: 'null-loader',
+    });
+
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -32,6 +39,13 @@ const nextConfig = {
   // Disable the _document check for App Router
   typescript: {
     ignoreBuildErrors: true,
+  },
+  // Disable the _document check for App Router
+  onDemandEntries: {
+    // Period (in ms) where the server will keep pages in the buffer
+    maxInactiveAge: 25 * 1000,
+    // Number of pages that should be kept simultaneously without being disposed
+    pagesBufferLength: 2,
   },
 }
 
